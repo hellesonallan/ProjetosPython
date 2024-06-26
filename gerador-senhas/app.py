@@ -8,9 +8,10 @@ def pergunta(prompt):
         resposta = input(prompt).strip().upper()
     return resposta
 
+# Função de geração de senha
 def gerar_senha():
     # Definir variáveis
-    tamanho = int(input("Quantos caracteres? (0/128): "))
+    tamanho = int(input("Quantos caracteres?: "))
     opcoes = []
 
     # Perguntar ao usuário sobre as opções
@@ -27,4 +28,5 @@ def gerar_senha():
     senha = str().join(random.choices(opcoes, k=tamanho))
     return senha
 
-print("Senha Gerada:", gerar_senha())
+print("Senha Gerada: " + gerar_senha())
+input("Press enter to exit...")
